@@ -39,7 +39,7 @@ def demo_heuristics():
     Compares heuristic values for the same state.
     """
     state = [1, 2, 3, 4, 5, 6, 0, 7, 8]
-    goal = [1, 2, 3, 4, 5, 6, 7, 8, 0]
+    goal = [0, 1, 2, 3, 4, 5, 6, 7, 8]
 
     print("=== HEURISTIC TEST ===")
     print("State:", state)
