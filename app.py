@@ -16,7 +16,12 @@ from experiments import run_experiments, summarize_results
 
 def demo_basic_functions():
     """
-    Simple tests for solvability and neighbor generation.
+    Function:
+        Simple tests for solvability and neighbor generation.
+    Input:
+        /
+    Output:
+        / (demonstrates basic functions and prints to console)
     """
     test_state = [1, 2, 3,
                   4, 0, 5,
@@ -36,7 +41,12 @@ def demo_basic_functions():
 
 def demo_heuristics():
     """
-    Compares heuristic values for the same state.
+    Function:
+        Compares heuristic values for the same state.
+    Input:
+        /
+    Output:
+        / (prints compared heuristics to console)
     """
     state = [1, 2, 3, 4, 5, 6, 0, 7, 8]
     goal = [0, 1, 2, 3, 4, 5, 6, 7, 8]
@@ -51,7 +61,12 @@ def demo_heuristics():
 
 def demo_a_star():
     """
-    Runs a single A* search example.
+    Function:
+        Runs a single A* search example.
+    Input:
+        /
+    Output:
+        / (prints A* search example to console)
     """
     start = [1, 2, 3,
              4, 0, 6,
@@ -73,7 +88,12 @@ def demo_a_star():
 
 def run_full_experiment():
     """
-    Runs 100 random puzzles and compares heuristic performance.
+    Function:
+        Runs 100 random puzzles and compares heuristic performance.
+    Input:
+        /
+    Output:
+        / (prints full experiment results to console)
     """
     print("=== EXPERIMENT: 100 Random Solvable States ===")
     results = run_experiments(100)

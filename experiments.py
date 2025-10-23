@@ -7,7 +7,12 @@ from heuristics import hamming, manhattan
 
 def random_state():
     """
-    Generates a random solvable 8-puzzle state
+    Function:
+        Generates a random solvable 8-puzzle state
+    Input:
+        None
+    Output:
+        list[int]: random generated solvable initial state of puzzle
     """
     while True:
         state = list(range(9))
@@ -17,8 +22,13 @@ def random_state():
 
 def run_experiments(n=100):
     """
-    Runs A* with both heuristics on n random solvable puzzles.
-    Measures Runtime and expanded nodes
+    Function:
+        Runs A* with both heuristics on n random solvable puzzles.
+        Measures Runtime and expanded nodes
+    Input:
+        n(int) - number of experiments to run
+    Output:
+        dict - results dictionary
     """
     goal = [0,1,2,3,4,5,6,7,8]
 
@@ -43,7 +53,8 @@ def run_experiments(n=100):
 
 def summarize_results(results):
     """
-    Computes mean and standard deviation for each heuristic
+    Function:
+        Computes mean and standard deviation for each heuristic
     Input:
         results (dict): {"hamming": [(nodes, time), ... ], "manhattan": [nodes, time), ...]}
     Output:

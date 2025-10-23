@@ -4,11 +4,12 @@ Contains the 8-puzzle logic, including the solvability check
 
 def count_inversions(state):
     """
-    Counts the number of inversions made in the 8-puzzle state
+    Function:
+        Counts the number of inversions made in the 8-puzzle state
     Input:
-        state (list[int]): 9 elements, 0 = empty tile
+        state (list[int]) - 9 elements, 0 = empty tile
     Output:
-        int: number of inversions
+        int - number of inversions
     """
     count = 0
     for i in range(len(state)):
@@ -19,18 +20,24 @@ def count_inversions(state):
 
 def is_solvable(state):
     """
-    Checks if the 8-puzzle state is solvable
+    Function:
+        Checks if the 8-puzzle state is solvable
+    Input:
+        state (list[int]) - 9 elements, 0 = empty tile
+    Output:
+        boolean - true if solvable, false otherwise
     """
     inversions = count_inversions(state)
     return inversions % 2 == 0
 
 def get_neighbors(state):
     """
-    Generates all valid neighbors of the 8-puzzle state by moving the blank tile (0) up, down, left or right.
+    Function:
+        Generates all valid neighbors of the 8-puzzle state by moving the blank tile (0) up, down, left or right.
     Input:
-        state (list[int]): 9 elements, 0 = empty tile
+        state (list[int]) - 9 elements, 0 = empty tile
     Output:
-        list[list[int]]: list of new states after valid moves
+        list[list[int]] - list of new states after valid moves
     """
     neighbors = []
 

@@ -4,8 +4,16 @@ from puzzle import get_neighbors, is_solvable
 
 def a_star(start, goal, heuristic):
     """
-    A* search for the 8-puzzle.
-    heuristic: function(state, goal) -> int
+    Function:
+        A* search for the 8-puzzle.
+        heuristic: function(state, goal) -> int
+    Input:
+        list[int] - start state and goal state
+        function - heuristic function (hamming or manhattan)
+    Output:
+        list[list[int]] - sequence of states  from start to goal
+        None - if no solution
+
     """
     if is_solvable(start) == False:
         return None, 0
