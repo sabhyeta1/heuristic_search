@@ -12,6 +12,7 @@ from puzzle import count_inversions, is_solvable, get_neighbors
 from heuristics import hamming, manhattan
 from search import a_star
 from experiments import run_experiments, summarize_results
+import time
 
 
 def demo_basic_functions():
@@ -96,9 +97,11 @@ def run_full_experiment():
         / (prints full experiment results to console)
     """
     print("=== EXPERIMENT: 100 Random Solvable States ===")
+    t1 = time.perf_counter()
     results = run_experiments(100)
+    t2 = time.perf_counter()
     summarize_results(results)
-    print()
+    print(f"\nTotal Runtime for all runs: {t2 - t1:.2f} seconds\n")
 
 
 if __name__ == "__main__":

@@ -69,7 +69,11 @@ def summarize_results(results):
         std_nodes = statistics.stdev(nodes)
         mean_time = statistics.mean(times)
         std_time = statistics.stdev(times)
+        max_time = max(times)
+        total_time = sum(times)
 
         print(f"\nHeuristic: {name}")
         print(f" AVG expanded nodes: {mean_nodes:.2f} +/- {std_nodes:.2f}")
         print(f" AVG runtime (s): {mean_time:.4f} +/- {std_time:.4f}")
+        print(f" MAX runtime (s): {max_time:.4f}")
+        print(f" TOTAL runtime (s): {total_time:.2f}")
