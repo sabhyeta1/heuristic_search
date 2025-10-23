@@ -69,14 +69,21 @@ def demo_a_star():
     Output:
         / (prints A* search example to console)
     """
-    start = [1, 2, 3,
-             4, 0, 6,
-             7, 5, 8]
-    goal = [1, 2, 3,
-            4, 5, 6,
-            7, 8, 0]
+    start = [1, 2, 3, 4, 0, 6, 7, 5, 8]
+    goal = [0, 1, 2, 3, 4, 5, 6, 7, 8]
 
-    print("=== A* SEARCH DEMO (Manhattan) ===")
+    print("=== A* SEARCH DEMO ===")
+
+    print("Hamming heuristic:")
+    path, expanded = a_star(start, goal, hamming)
+    if path:
+        print("Solution found!")
+        print("Steps needed :", len(path) - 1)
+        print("Nodes expanded:", expanded)
+    else:
+        print("No solution found.")
+
+    print("\nManhattan heuristic:")
     path, expanded = a_star(start, goal, manhattan)
     if path:
         print("Solution found!")
@@ -84,8 +91,8 @@ def demo_a_star():
         print("Nodes expanded:", expanded)
     else:
         print("No solution found.")
-    print()
 
+    print()
 
 def run_full_experiment():
     """
